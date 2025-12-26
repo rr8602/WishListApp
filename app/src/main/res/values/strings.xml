@@ -1,0 +1,32 @@
+<resources>
+    <!-- 앱 이름 -->
+    <string name="app_name">나의 위시리스트</string>
+    
+    <!-- 메인 화면 -->
+    <string name="no_wishes">위시가 없습니다</string>
+    <string name="wish_count">%d개의 위시</string>
+    
+    <!-- 빈 상태 -->
+    <string name="empty_state_title">아직 위시가 없어요</string>
+    <string name="empty_state_message">+ 버튼을 눌러\n첫 위시를 추가해보세요!</string>
+    
+    <!-- 다이얼로그 -->
+    <string name="add_wish">위시 추가</string>
+    <string name="edit_wish">위시 수정</string>
+    <string name="wish_title">제목</string>
+    <string name="wish_description">설명 (선택사항)</string>
+    <string name="save">저장</string>
+    <string name="cancel">취소</string>
+    <string name="delete">삭제</string>
+    
+    <!-- 오류 메시지 -->
+    <string name="error_title_required">제목을 입력해주세요</string>
+    
+    <!-- 삭제 확인 -->
+    <string name="delete_wish_title">위시 삭제</string>
+    <string name="delete_wish_message">\'%s\'를 삭제하시겠습니까?</string>
+    <string name="delete_wish">삭제</string>
+
+    <!-- 소셜 로그인 설정 -->
+    <string name="default_web_client_id">468952777584-g1ve0ileiksqqhq7pe068k6ubpbetrua.apps.googleusercontent.com</string>
+</resources>

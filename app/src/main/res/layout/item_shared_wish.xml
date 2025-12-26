@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/border">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 상단: 제목과 가격 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/textWishName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="위시 항목"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/textPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100,000원"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
+
+        <!-- 카테고리 -->
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="카테고리"
+            android:layout_marginTop="8dp"
+            app:chipBackgroundColor="@color/surface"
+            app:chipStrokeWidth="1dp"
+            app:chipStrokeColor="@color/border" />
+
+        <!-- 메모 -->
+        <TextView
+            android:id="@+id/textMemo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="메모 내용"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="8dp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:visibility="gone" />
+
+        <!-- URL -->
+        <TextView
+            android:id="@+id/textUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="https://example.com"
+            android:textSize="12sp"
+            android:textColor="@color/primary"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:autoLink="web"
+            android:visibility="gone" />
+
+        <!-- 목표일 -->
+        <TextView
+            android:id="@+id/textTargetDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="목표일: 2024-12-31"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="4dp"
+            android:visibility="gone" />
+
+        <!-- 선물 완료 표시 -->
+        <LinearLayout
+            android:id="@+id/giftedLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎁 선물 완료됨"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_red_light" />
+
+            <TextView
+                android:id="@+id/textGiftedBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="선물한 사람: 홍길동"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/textGiftedMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="메시지"
+                android:textSize="12sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 선물하기 버튼 -->
+        <Button
+            android:id="@+id/buttonMarkAsGifted"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎁 선물 완료 표시"
+            android:layout_marginTop="12dp" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

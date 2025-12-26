@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 이미지 선택 권한 (Android 13+) -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <!-- 이미지 선택 권한 (Android 12 이하) -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <!-- 알림 권한 (Android 13+) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- 정확한 알람 스케줄링 권한 -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+    <!-- 인터넷 권한 (가격 추적) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".WishListApplication"
+        android:allowBackup="true"
+        android:icon="@android:drawable/sym_def_app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WishListApp">
+
+        <!-- 로그인 화면 (앱 시작점) -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 메인 화면 -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <!-- 프로필 화면 -->
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+
+        <!-- 공유된 위시리스트 화면 (Deep Link 지원) -->
+        <activity
+            android:name=".SharedWishlistActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Custom URL Scheme: wishlistapp://shared?userId=xxx -->
+                <data
+                    android:scheme="wishlistapp"
+                    android:host="shared" />
+            </intent-filter>
+        </activity>
+
+        <!-- 카카오 로그인 Redirect 처리 -->
+        <activity
+            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Redirect URI: kakao{NATIVE_APP_KEY}://oauth -->
+                <data
+                    android:host="oauth"
+                    android:scheme="kakao86e22355c971bf22be29a529dc54c4a6" />
+            </intent-filter>
+        </activity>
+
+        <!-- 카카오 SDK 앱 키 -->
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="86e22355c971bf22be29a529dc54c4a6" />
+
+        <!-- 알림 Broadcast Receiver -->
+        <receiver
+            android:name=".notification.ReminderBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+</manifest>

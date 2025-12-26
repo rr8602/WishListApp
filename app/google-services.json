@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "468952777584",
+    "project_id": "wishlist-app-cfb50",
+    "storage_bucket": "wishlist-app-cfb50.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468952777584:android:a2c06e426bf1038ec045b5",
+        "android_client_info": {
+          "package_name": "com.wishlist.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "468952777584-l4a3cc76ukninf8phn10597nseiccam8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wishlist.app",
+            "certificate_hash": "b2c1723c7824003982d5e33c522bcfc5f77d185a"
+          }
+        },
+        {
+          "client_id": "468952777584-g1ve0ileiksqqhq7pe068k6ubpbetrua.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6Q25pm6K1bwDW-bUMTCoWKCzk2joYhGk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "468952777584-g1ve0ileiksqqhq7pe068k6ubpbetrua.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
